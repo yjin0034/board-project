@@ -1,3 +1,7 @@
+-- 테스트 계정
+-- TODO: 테스트용이지만 비밀번호가 노출된 데이터 세팅. 개선하는 것이 좋을지 고민해보자.
+INSERT INTO user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) VALUES ('jcob', 'asdf1234', 'Jcob', 'jcob@mail.com', 'I am Jcob.', now(), 'jcob', now(), 'jcob');
+
 -- 123 게시글
 INSERT INTO article (title, content, hashtag, created_by, modified_by, created_at, modified_at) VALUES
                                                                                                     ('Nullam molestie nibh in lectus.', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 'error: Could not access blank value: Use || to provide a default value for blank fields.  Example: (my_field || 0) + 1', 'Chere', 'Mathew', '2025-01-27 03:55:26', '2024-11-23 08:36:21'),
