@@ -1,7 +1,7 @@
 -- 테스트 계정
 -- TODO: 테스트용이지만 비밀번호가 노출된 데이터 세팅. 개선하는 것이 좋을지 고민해보자.
-INSERT INTO user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) VALUES ('jcob', 'asdf1234', 'Jcob', 'jcob@mail.com', 'I am Jcob.', now(), 'jcob', now(), 'jcob');
-INSERT INTO user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) VALUES ('jcob2', 'asdf1234', 'Jcob2', 'jcob2@mail.com', 'I am Jcob2.', now(), 'jcob2', now(), 'jcob2');
+INSERT INTO user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) VALUES ('jcob', '{noop}asdf1234', 'Jcob', 'jcob@mail.com', 'I am Jcob.', now(), 'jcob', now(), 'jcob');
+INSERT INTO user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) VALUES ('jcob2', '{noop}asdf1234', 'Jcob2', 'jcob2@mail.com', 'I am Jcob2.', now(), 'jcob2', now(), 'jcob2');
 
 -- 123 게시글
 INSERT INTO article (user_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) VALUES
