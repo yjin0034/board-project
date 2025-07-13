@@ -1,6 +1,5 @@
 package com.projectboard.boardproject.controller;
 
-import com.projectboard.boardproject.config.SecurityConfig;
 import com.projectboard.boardproject.config.TestSecurityConfig;
 import com.projectboard.boardproject.dto.ArticleCommentDto;
 import com.projectboard.boardproject.dto.request.ArticleCommentRequest;
@@ -46,6 +45,7 @@ class ArticleCommentControllerTest {
         this.formDataEncoder = formDataEncoder;
     }
 
+
     @WithUserDetails(value = "jcobTest", setupBefore = TestExecutionEvent.TEST_EXECUTION)
     @DisplayName("[view][POST] 댓글 등록 - 정상 호출")
     @Test
@@ -90,7 +90,5 @@ class ArticleCommentControllerTest {
                 .andExpect(redirectedUrl("/articles/" + articleId));
         then(articleCommentService).should().deleteArticleComment(articleCommentId, userId);
     }
-
-
 
 }

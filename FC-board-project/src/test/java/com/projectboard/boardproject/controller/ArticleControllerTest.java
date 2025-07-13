@@ -1,7 +1,6 @@
 package com.projectboard.boardproject.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.projectboard.boardproject.config.SecurityConfig;
 import com.projectboard.boardproject.config.TestSecurityConfig;
 import com.projectboard.boardproject.domain.constant.FormStatus;
 import com.projectboard.boardproject.domain.constant.SearchType;
@@ -52,6 +51,7 @@ class ArticleControllerTest {
     @MockBean private ArticleService articleService;
     @MockBean private PaginationService paginationService;
 
+
     public ArticleControllerTest(
             @Autowired MockMvc mvc,
             @Autowired ObjectMapper mapper
@@ -59,6 +59,7 @@ class ArticleControllerTest {
         this.mvc = mvc;
         this.formDataEncoder = new FormDataEncoder(mapper);
     }
+
 
     @DisplayName("[view][GET] 게시글 리스트 (게시판) 페이지 - 정상 호출")
     @Test
